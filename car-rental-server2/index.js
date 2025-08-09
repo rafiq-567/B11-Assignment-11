@@ -1,5 +1,5 @@
-const express = require('express')
 require('dotenv').config()
+const express = require('express')
 const cors = require('cors')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 3000
@@ -11,23 +11,25 @@ app.use(express.json())
 
 // Define allowed origins
 const allowedOrigins = [
-  'http://localhost:5174', 
-  'https://car-rental-76f12.web.app',
- 
+
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://car-rental-76f12.web.app',
+
 ];
 
 app.use(cors({
-    
-    
+
+
     origin: function (origin, callback) {
-       
+
         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
         }
     },
-    credentials: true             
+    credentials: true
 }));
 const client = new MongoClient(process.env.MONGODB_URI, {
     serverApi: {
@@ -51,7 +53,7 @@ async function run() {
 
             // Only filter if query param exists
             if (available === 'true') {
-                filter.availability = 'Available'; 
+                filter.availability = 'Available';
             }
 
             try {
@@ -133,7 +135,7 @@ async function run() {
 
         app.get("/my-bookings/:email", async (req, res) => {
             const email = req.params.email;
-            const filter = { ownerEmail: email }; 
+            const filter = { ownerEmail: email };
 
             try {
                 const bookings = await bookingCollection.find(filter).toArray();
@@ -182,10 +184,10 @@ async function run() {
                         $set: {
                             startDate,
                             endDate,
-                            bookingDate: new Date(), 
+                            bookingDate: new Date(),
                         },
                     },
-                    { returnDocument: 'after' } 
+                    { returnDocument: 'after' }
                 );
 
                 if (result.value) {
