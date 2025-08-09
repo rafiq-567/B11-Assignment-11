@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000
 const app = express()
 
 // middleware
-// app.use(cors())
+
 app.use(express.json())
 
 // Define allowed origins
