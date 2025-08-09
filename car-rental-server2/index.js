@@ -147,7 +147,6 @@ async function run() {
 
 
         // cancel functionalities
-
         app.patch('/bookings/:id/cancel', async (req, res) => {
             const { id } = req.params;
 
