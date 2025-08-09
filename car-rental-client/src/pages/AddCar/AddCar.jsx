@@ -26,8 +26,8 @@ const AddCar = () => {
         console.log(location, bookingCount, imageUrl, description, features, vehicleRegistrationNumber, availability, dailyRentalPrice, carModel)
 
         // 2. Get user details (owner) from AuthContext
-        const ownerEmail = user?.email; // Safely get email if user exists
-        const ownerUid = user?.uid;     // Safely get UID if user exists
+        const ownerEmail = user?.email; 
+        const ownerUid = user?.uid;     
         const datePosted = new Date().toISOString();
 
 
