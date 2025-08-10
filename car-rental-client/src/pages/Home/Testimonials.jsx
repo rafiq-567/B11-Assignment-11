@@ -2,75 +2,75 @@
 
 import React from 'react';
 
-import { FaStar } from 'react-icons/fa'; 
+import { FaStar } from 'react-icons/fa';
 
 
 
 const testimonialsData = [
 
- {
+   {
 
- id: 1,
+      id: 1,
 
- quote: "Renting a car was incredibly easy and straightforward. The car was spotless and the process was super quick. Highly recommend!",
+      quote: "Renting a car was incredibly easy and straightforward. The car was spotless and the process was super quick. Highly recommend!",
 
-name: "Aisha Rahman",
+      name: "Aisha Rahman",
 
- city: "Dhaka",
+      city: "Dhaka",
 
- rating: 5,
+      rating: 5,
 
- avatar: "https://randomuser.me/api/portraits/women/11.jpg" // Placeholder avatar
+      avatar: "https://randomuser.me/api/portraits/women/11.jpg" // Placeholder avatar
 
-  },
+   },
 
-  {
+   {
 
- id: 2,
+      id: 2,
 
- quote: "Fantastic selection and even better prices! Found the perfect luxury car for my weekend trip. Customer support was also very helpful.",
+      quote: "Fantastic selection and even better prices! Found the perfect luxury car for my weekend trip. Customer support was also very helpful.",
 
- name: "Mohammad Islam",
+      name: "Mohammad Islam",
 
- city: "Chittagong",
+      city: "Chittagong",
 
- rating: 5,
+      rating: 5,
 
- avatar: "https://randomuser.me/api/portraits/men/22.jpg" // Placeholder avatar
+      avatar: "https://randomuser.me/api/portraits/men/22.jpg" // Placeholder avatar
 
-  },
+   },
 
-  {
+   {
 
- id: 3,
+      id: 3,
 
- quote: "The booking process was a breeze. I loved the real-time availability updates. Will definitely use this service again!",
+      quote: "The booking process was a breeze. I loved the real-time availability updates. Will definitely use this service again!",
 
- name: "Fatima Begum",
+      name: "Fatima Begum",
 
- city: "Sylhet",
+      city: "Sylhet",
 
- rating: 4,
+      rating: 4,
 
- avatar: "https://randomuser.me/api/portraits/women/33.jpg" // Placeholder avatar
+      avatar: "https://randomuser.me/api/portraits/women/33.jpg" // Placeholder avatar
 
-  },
+   },
 
-  {
+   {
 
- id: 4,
+      id: 4,
 
- quote: "Affordable rates and great customer service. Picked up and dropped off without any hassle. A top-notch car rental experience.",
+      quote: "Affordable rates and great customer service. Picked up and dropped off without any hassle. A top-notch car rental experience.",
 
- name: "Rahim Uddin",
+      name: "Rahim Uddin",
 
- city: "Khulna",
+      city: "Khulna",
 
- rating: 5,
+      rating: 5,
 
- avatar: "https://randomuser.me/api/portraits/men/44.jpg" // Placeholder avatar
+      avatar: "https://randomuser.me/api/portraits/men/44.jpg" // Placeholder avatar
 
-  },
+   },
 
 ];
 
@@ -78,91 +78,91 @@ name: "Aisha Rahman",
 
 const Testimonials = () => {
 
-  return (
+   return (
 
- // Background colors are now directly set to dark theme values
+      // Background colors are now directly set to dark theme values
 
- <section className="py-20 bg-gray-900 transition-colors duration-300">
+      <section className="py-20 bg-gray-900 transition-colors duration-300">
 
-   <div className="container mx-auto px-4">
+         <div className="container mx-auto px-4">
 
-  {/* Text color is now directly set to dark theme text color */}
+            {/* Text color is now directly set to dark theme text color */}
 
-  <h2 className="text-5xl font-bold text-center mb-16 text-gray-100">
+            <h2 className="text-5xl font-bold text-center mb-16 text-gray-100">
 
-    What Our Customers Say
+               What Our Customers Say
 
-  </h2>
+            </h2>
 
 
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
-    {testimonialsData.map((testimonial, index) => (
+               {testimonialsData.map((testimonial, index) => (
 
-   <div
+                  <div
 
-     key={testimonial.id}
+                     key={testimonial.id}
 
-     // Card background and text colors are now directly dark theme values
+                     // Card background and text colors are now directly dark theme values
 
-     className="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center text-center
+                     className="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center text-center
 
        transform transition-all duration-500 hover:scale-[1.02] hover:shadow-xl
 
        opacity-0 animate-fade-in" // Animation still applies
 
-     style={{ animationDelay: `${index * 0.1}s` }}
+                     style={{ animationDelay: `${index * 0.1}s` }}
 
-   >
+                  >
 
-     <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-blue-600 shadow-md">
+                     <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-blue-600 shadow-md">
 
-    <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
+                        <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
 
-     </div>
+                     </div>
 
-     <p className="text-lg italic text-gray-200 mb-4">
+                     <p className="text-lg italic text-gray-200 mb-4">
 
-    "{testimonial.quote}"
+                        "{testimonial.quote}"
 
-     </p>
+                     </p>
 
-     <div className="flex justify-center mb-3">
+                     <div className="flex justify-center mb-3">
 
-    {[...Array(5)].map((_, i) => (
+                        {[...Array(5)].map((_, i) => (
 
-      <FaStar
+                           <FaStar
 
-     key={i}
+                              key={i}
 
-     className={
+                              className={
 
-       `text-xl ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-500'}` 
+                                 `text-xl ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-500'}`
 
-     }
+                              }
 
-      />
+                           />
 
-    ))}
+                        ))}
 
-     </div>
+                     </div>
 
-     <p className="font-semibold text-gray-100">{testimonial.name}</p>
+                     <p className="font-semibold text-gray-100">{testimonial.name}</p>
 
-     <p className="text-sm text-gray-400">{testimonial.city}</p>
+                     <p className="text-sm text-gray-400">{testimonial.city}</p>
 
-   </div>
+                  </div>
 
-    ))}
+               ))}
 
-  </div>
+            </div>
 
-   </div>
+         </div>
 
- </section>
+      </section>
 
-  );
+   );
 
 };
 

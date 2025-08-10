@@ -6,7 +6,7 @@ const Banner = () => {
         <div style={{ backgroundImage: `url(${car})` }}
             className="bg-cover bg-center h-screen flex items-center justify-center mx-auto rounded-b-lg text-white">
             <div className="flex flex-col items-center justify-center text-center ">
-                <h1 className="text-6xl font-bold drop-shadow-lg">Drive Your Dreams Today!</h1>
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold drop-shadow-lg">Drive Your Dreams Today!</h1>
                
                  <Link
         to="/availableCars" 

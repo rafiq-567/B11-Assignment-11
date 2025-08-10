@@ -13,7 +13,7 @@ const RecentListings = ({ car }) => {
 
 
     return (
-        <div className='card mt-2 flex bg-emerald-100 shadow-xl w-11/12 mx-auto'>
+        <div className='card mt-8 flex bg-emerald-100 shadow-xl w-11/12 mx-auto'>
             
             <figure className='h-36 '>
 
@@ -43,9 +43,7 @@ const RecentListings = ({ car }) => {
                     </>
                 )}
                     </div>
-                    {/* <div className="flex gap-2">
-                        <p>: {bookingCount}</p>
-                    </div> */}
+                  
                     <div className="flex gap-2">
                         <IoIosTime className="mt-1 text-amber-600" />
 

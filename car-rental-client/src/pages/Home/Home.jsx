@@ -13,10 +13,10 @@ const Home = () => {
     const [cars, setCars] = useState(data?.data || [])
     console.log(cars)
     return (
-        <div className='bg-gray-900'>
+        <div className='bg-gray-900 mt-16'>
             <Banner></Banner>
             <WhyChooseUs></WhyChooseUs>
-            <h1 className='text-6xl text-center text-amber-500 mb-6'>Recent Listings</h1>
+            <h1 className='text-6xl text-center text-amber-500 mb-10'>Recent Listings</h1>
            <div className='grid grid-cols-3 bg-gray-900 mx-auto mt-4 '>
             
              {
