@@ -4,10 +4,11 @@ import { CgUnavailable } from "react-icons/cg";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { IoIosTime } from "react-icons/io";
 import { formatRelativeTime } from "../shared/formatTime";
+import { MdDescription } from "react-icons/md";
 
 
 const RecentListings = ({ car }) => {
-    const { _id, imageUrl, carModel, dailyRentalPrice, availability, bookingCount, datePosted } = car;
+    const { _id, imageUrl, carModel, dailyRentalPrice, availability, bookingCount, datePosted, description } = car;
 
     const isAvailable = availability === "Available";
 
@@ -21,6 +22,11 @@ const RecentListings = ({ car }) => {
             </figure>
             <div className='flex mt-4 w-full ml-4 mb-3 text-black'>
                 <div>
+                    <div className="flex gap-2">
+                        
+                        <MdDescription className="mt-1" />
+                        <h2 className=''>{description}</h2>
+                    </div>
                     <div className="flex gap-2">
                         <FaCar className="mt-1" />
                         <h2 className=''>{carModel}</h2>
@@ -48,6 +54,9 @@ const RecentListings = ({ car }) => {
                         <IoIosTime className="mt-1 text-amber-600" />
 
                         <p>Added: {formatRelativeTime(datePosted)}</p>
+                    </div>
+                    <div>
+                        <button className="btn bg-amber-700 rounded-lg mx-auto text-white">See More</button>
                     </div>
                 </div>
 

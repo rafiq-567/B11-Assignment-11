@@ -104,7 +104,7 @@ const MyBookings = () => {
     }
 
     return (
-        <div className="p-4">
+        <div className="p-4 mt-20">
             <h2 className="text-2xl font-bold mb-4 text-gray-800">My Bookings</h2>
 
             {/* Responsive Table */}

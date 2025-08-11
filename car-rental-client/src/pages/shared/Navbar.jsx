@@ -38,6 +38,7 @@ const Navbar = () => {
             {!user && ( // Only show Log In if user is NOT authenticated
                 <li><NavLink to="/logIn">Log In</NavLink></li>
             )}
+            <li><NavLink to="/about">About Us</NavLink></li>
         </>
     );
 

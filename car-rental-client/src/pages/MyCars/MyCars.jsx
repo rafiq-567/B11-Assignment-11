@@ -77,7 +77,7 @@ const MyCars = () => {
   });
 
   return (
-    <div className="p-4">
+    <div className="p-4 mt-20">
       <h1 className="text-2xl text-center font-bold mb-4 text-black">My Listed Cars</h1>
 
       {cars.length === 0 ? (

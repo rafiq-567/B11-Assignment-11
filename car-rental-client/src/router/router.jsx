@@ -13,6 +13,7 @@ import axios from "axios";
 import CarDetails from "../pages/AvailableCars/CarDetails";
 import PrivateRoute from "../routes/PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/availableCars",
                 Component: AvailableCars,
+            },
+            {
+                path: "/about",
+                Component: AboutUs,
             },
             {
                 path: "/car/:id",

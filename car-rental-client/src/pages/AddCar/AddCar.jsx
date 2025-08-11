@@ -79,7 +79,7 @@ const AddCar = () => {
     }
 
     return (
-        <div className="flex justify-center py-10  bg-gray-900">
+        <div className="flex justify-center py-10 mt-10  bg-gray-900">
             <div className="w-full max-w-2xl p-6  bg-gray-800 rounded-lg shadow-xl">
                 <h1 className="text-4xl font-bold text-center text-white mb-8 text-gray-800 ">Add New Car</h1>
                 <form onSubmit={handleAddCar}>

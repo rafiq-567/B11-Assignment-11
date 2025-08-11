@@ -33,20 +33,27 @@ const AvailableCars = () => {
         car.location.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
+    
     return (
         <div className="p-4">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-2 mb-4">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-2 mb-4">
                 {/* 🔍 Search Bar */}
-                <input
+
+                <div className='w-full flex gap-2 '>
+                    <div className='bg-blue-800 mt-20 text-center p-1 rounded-lg'>
+                        <h1 className='mt-0.5 text-white'>Search</h1>
+                    </div>
+                    <input
                     type="text"
                     placeholder="Search by model, brand, or location..."
-                    className="input px-2 py-1 rounded border w-full md:w-2/3"
+                    className="input px-2 py-1 rounded border mt-20 w-1/2 sm:w-full"
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                 />
+                </div>
 
                 {/* Sort & Toggle */}
-                <div className="flex justify-end items-center gap-2">
+                <div className="flex justify-end items-center gap-2  mt-20">
                     <select value={sort} onChange={e => setSort(e.target.value)} className="input px-2 py-1 rounded border">
                         <option value="" disabled>Sort By</option>
                         <option value="newest">Date Added (Newest)</option>
@@ -63,7 +70,7 @@ const AvailableCars = () => {
             <div className={view === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4' : 'space-y-4'}>
                 {filteredCars.map(car => (
                     <div key={car._id} className="text-black border p-3 rounded-md shadow-sm bg-white">
-                        <img src={car.imageUrl} alt={car.carModel} className="w-full h-40 object-cover rounded-md" />
+                        <img src={car.imageUrl} alt={car.carModel} className="w-full h-1/2 rounded-md" />
 
                         <div className='mt-2 space-y-1'>
                             <div className='flex items-center gap-2'>
